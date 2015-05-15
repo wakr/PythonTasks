@@ -67,7 +67,7 @@ def vaihda_luku(luvut, indeksi, uusi_luku):
 def yhdista_taulut(a, b):
     return []
 
-# 12. Tee funktio capslockkaa(kirjaimet), joka muuttaa muuttujan 'kirjaimet' kirjaimet isoiksi
+# 12. Tee funktio capslockkaa(kirjaimet), joka muuttaa muuttujan 'kirjaimet' kirjaimet isoiksi Vinkki: upper()
 
 kirjaimet = [['a'], ['b'], ['c']]
 
@@ -82,3 +82,18 @@ def capslockkaa(kirjaimet):
 
 def fibonacci(n):
     return 0;
+
+
+# 14. Tee funktio eka_rekursio(sana), joka tyhjentaa rekursiivisesti listan
+# http://www.helsinki.fi/~huhmarni/cog131/luento1_k08.pdf
+# https://noppa.aalto.fi/noppa/kurssi/t-106.1210/luennot/T-106_1210_luento_20.pdf
+# Siis esimerkiksi: eka_rekursio("Pultsi") k‰y l‰pi j‰rjestyksess‰
+# Pultsi => ultsi => ltsi => tsi => si => i ja lopulta tyhj‰n
+# palautusarvo pit‰isi siis aina olla tyhj‰ taulukko eli ""
+# Vinkki: kannattaa piirt‰‰ paperille kuvia miten ohjelma toimisi graafisesti
+
+def eka_rekursio(sana):
+    # muista lopettaa ohjelmasi
+    # kutsu uudelleen samaa funktiota eka_rekursio
+    # muista muokata parametria jotenkin
+    return sana
