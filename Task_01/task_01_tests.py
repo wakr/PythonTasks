@@ -57,6 +57,8 @@ class Task01_tests(unittest.TestCase):
     def test_fibonacci(self):
         self.assertEqual(55, fibonacci(10))
 
+    def test_eka_rekursio(self):
+        self.assertEqual('', eka_rekursio('Kaaleppi soi omenan.'))
 
 if __name__ == '__main__':
     unittest.main()
