@@ -32,9 +32,22 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(("AA", 0), pisimman_indeksi(["AA", "B", "C"]))
         self.assertEqual(("AA", 2), pisimman_indeksi(["AA", "BBBB", "CCCCC"]))
 
+    def test_alusta_loppuun_listaan(self):
+        self.assertEqual([1, 2, 3], alusta_loppuun_listaan(1, 3))
+        self.assertEqual([99, 100], alusta_loppuun_listaan(99, 100))
+        self.assertEqual([-1, -2, -3], alusta_loppuun_listaan(-1, -3))
 
+    def test_erittele_parilliset(self):
+        self.assertEqual([2, 4, 6], erittele_pariliset(range(1, 7)))
+        self.assertEqual(list(range(2, 100, 2)), erittele_pariliset(list(range(1, 100))))
 
+    def test_henkilotieto_tulostin(self):
+        henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
+        self.assertEqual("Pultun syntymavuosi on 1992 ja han tykkaa sukluusta", henkilotieto_tulostin(**henkilo))
 
+    def test_paranneltu_henkilo_tulostin(self):
+        henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
+        self.assertEqual("Pultun syntymavuosi on 1992 ja han tykkaa sukluusta", paranneltu_henkilo_tulostin(henkilo))
 
 if __name__ == '__main__':
     unittest.main()

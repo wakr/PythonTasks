@@ -33,9 +33,45 @@ def pisin_sana(sanat):
     return ""
 
 
-# Tee funktio pisimman_indeksi(sanat), joka palauttaa parin (a,b) (eli ns. tuplen), jossa a on pisin sana sanat-taulukosta ja
+# 4. Tee funktio pisimman_indeksi(sanat), joka palauttaa parin (a,b) (eli ns. tuplen), jossa a on pisin sana sanat-taulukosta ja
 # b on pisimman sanan indeksi
 def pisimman_indeksi(sanat):
     return "", 0
 
-# selection sort?
+
+# 5. Tee funktio alusta_loppuun_listaan(alku, loppu), joka luo uuden listan valilta alku-loppu
+
+def alusta_loppuun_listaan(alku, loppu):
+    return []
+
+
+# 6. Tee funktio erittele_parilliset(lista), joka muodostaa uuden listan ilman parittomia lukuja
+# Vinkki: continue
+
+def erittele_pariliset(lista):
+    return []
+
+
+# 7. Tutustu dictionary-rakenteeseen https://docs.python.org/2/tutorial/datastructures.html#dictionaries
+# ja ota selvää mita **-operaattori tekee. Tee sen jälkeen henkilotieto_tulostin(henkilo), jota kutsut **henkilo-muuttujalla.
+# Funktion pitaisi palauttaa muodossa "Pultun syntymavuosi on 1992 ja han tykkaa sukluusta"
+# Mita tapahtui **-operaattorilla?
+
+def henkilotieto_tulostin(nimi, syntymavuosi, tykkaa):
+    return ""
+
+
+henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
+
+# 8. Parannellaan tulostajaa. Tee funktio paranneltu_henkilo_tulostin(henkilo), joka tulostaa henkilon tiedot
+# kayttaen [] -operaattoria, jotta paaset tietoihin kasiksi.
+
+def paranneltu_henkilo_tulostin(henkilo):
+    return ""
+
+    # Jos sait edellisen tehtavan tehtya ota selvaa http://fi.wikipedia.org/wiki/JSON
+    # Kay ilmi, etta Pythonin kayttama muoto on itseasiassa JSON-tyyppista dataa. Taman muodon kanssa
+    # on hyvin helppoa kommunikoida jolloin seuraava sivu on esim. mahdollinen
+    # https://glosbe.com/gapi/translate?from=eng&dest=fra&format=json&phrase=chocolate&pretty=true
+    # Jos osoitteen parametreja lukee tarkasti, voi nahda, etta kyseinen kysely kaantaa sanan "chocolate" englannista
+    # ranskaan
