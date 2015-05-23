@@ -42,12 +42,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(list(range(2, 100, 2)), erittele_pariliset(list(range(1, 100))))
 
     def test_henkilotieto_tulostin(self):
-        henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
         self.assertEqual("Pultun syntymavuosi on 1992 ja han tykkaa sukluusta", henkilotieto_tulostin(**henkilo))
 
     def test_paranneltu_henkilo_tulostin(self):
-        henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
         self.assertEqual("Pultun syntymavuosi on 1992 ja han tykkaa sukluusta", paranneltu_henkilo_tulostin(henkilo))
+
+    def test_tulostus_natiksi(self):
+        self.assertTrue(tulostus_natiksi(henkilo).startswith("{\n"),
+                        msg="Aloittavan hakasulun jalkeen pitaisi olla rivinvaihto")
+        self.assertTrue(tulostus_natiksi(henkilo).endswith("\n}"),
+                        msg="Ennen viimeista hakasulkua pitaisi olla rivinvaihto")
+        self.assertTrue(tulostus_natiksi(henkilo).splitlines().__len__() == len(henkilo) + 2,
+                        msg="Rivien lkm on vaara.")
+        # 2 is the generated { and }
 
 if __name__ == '__main__':
     unittest.main()

@@ -60,7 +60,7 @@ def erittele_pariliset(lista):
 def henkilotieto_tulostin(nimi, syntymavuosi, tykkaa):
     return ""
 
-
+# ala muokkaa tata dictionary-rakennetta
 henkilo = {"nimi": "Pultu", "syntymavuosi": "1992", "tykkaa": "sukluusta"}
 
 # 8. Parannellaan tulostajaa. Tee funktio paranneltu_henkilo_tulostin(henkilo), joka tulostaa henkilon tiedot
@@ -70,8 +70,23 @@ def paranneltu_henkilo_tulostin(henkilo):
     return ""
 
     # Jos sait edellisen tehtavan tehtya ota selvaa http://fi.wikipedia.org/wiki/JSON
-    # Kay ilmi, etta Pythonin kayttama muoto on itseasiassa JSON-tyyppista dataa. Taman muodon kanssa
-    # on hyvin helppoa kommunikoida jolloin seuraava sivu on esim. mahdollinen
+    # Kay ilmi, etta Pythonin kayttama dictionary-muoto on itseasiassa JSON-tyyppista dataa. Taman muodon kanssa
+    # on hyvin helppoa kommunikoida jolloin esim. seuraava sivu on mahdollinen
     # https://glosbe.com/gapi/translate?from=eng&dest=fra&format=json&phrase=chocolate&pretty=true
     # Jos osoitteen parametreja lukee tarkasti, voi nahda, etta kyseinen kysely kaantaa sanan "chocolate" englannista
     # ranskaan
+
+
+# 9. Tutustutaan viela hieman JSON-formaattiin ja dictionary-rakenteeseen. Tee funktio tulostus_natiksi(dict), joka
+# palauttaa minkä tahansa dictionary-rakenteen seuraavassa muodossa (eli siis json-muodossa):
+#   {
+#       "nimi": "Pultu",
+#       "syntymavuosi": "1992",
+#       "tykkaa": "sukluusta"
+#   }
+#
+# Vinkit: json, dumps()-funktio, indent, sort_keys (huomaa, että avaimet ovat aakkosjärjestyksessä). Saat
+# paluuarvona json-objektin, jonka tulostaminen tuottaa ylhäällä mainitun muotoilun
+
+def tulostus_natiksi(dc):
+    return ""
